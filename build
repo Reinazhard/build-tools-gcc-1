@@ -827,7 +827,7 @@ GCC COMMIT URL: https://github.com/gcc-mirror/gcc/commit/${GCC_HEAD_COMMIT}
 BUILDER COMMIT: ${BUILDER_COMMIT}" && git push
         fi
     elif [ ${TARGET} == "x86_64-linux-gnu" ]; then
-        git clone "https://theradcolor:${GITHUB_TOKEN}@github.com/theradcolor/x86_64-linux-gnu" upstream
+        git clone "https://${GITHUB_TOKEN}@github.com/Reinazhard/x86_64-gcc" upstream
         cd upstream || exit
         rm -rf *
         cp -r ../${TARGET}/* .
@@ -852,7 +852,7 @@ BUILDER COMMIT: ${BUILDER_COMMIT}" && git push
 function push_logs()
 {
     TG_TOKEN="123:xyz"
-    CHAT_ID="-1001375712567"
+    CHAT_ID="-1001167537075"
 
     if [ ${TARGET} == "arm-linux-gnueabi" ]; then
         LOG="/drone/src/build-arm-gnu-gcc.log"
